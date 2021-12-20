@@ -1,0 +1,30 @@
+﻿@model LSD.Models.Promocao
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes </h1>
+
+<div>
+    <h4>Promoção</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DotPromo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DotPromo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Destino)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Destino.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>
